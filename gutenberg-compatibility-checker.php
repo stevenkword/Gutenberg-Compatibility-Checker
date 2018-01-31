@@ -90,6 +90,7 @@ class WPEngine_GutenbergCompat {
 	 */
 	public function settings_page() {
 		$classic_editor_link = admin_url( 'plugin-install.php?s=classic-editor&tab=search&type=term' );
+		$gutenberg_link = admin_url( 'plugin-install.php?s=gutenberg&tab=search&type=term' );
 		$phpversions =  array(
 			'All' => 'All',
 			'Akismet' => 'akismet',
@@ -137,7 +138,15 @@ class WPEngine_GutenbergCompat {
 				<hr>
 				<h2>Scan Results</h2>
 
-				<p>Plugins are <b>NOT</b> compatible with Gutenberg!</p>
+				<p>Congratulations, your plugins <b>ARE</b> compatible with Gutenberg!</p>
+
+				<div class="wpe-pcc-download-report" style="display:block;">
+					<a href="<?php echo esc_url( $classic_editor_link ); ?>" class="button">Test the Gutenberg Now</a>
+					<br/>
+					<hr>
+				</div> <!-- /wpe-pcc-download-report -->
+
+				<p>Unfortunately, all of your plugins are <b>NOT</b> yet compatible with Gutenberg!</p>
 
 				<div class="wpe-pcc-download-report" style="display:block;">
 					<a href="<?php echo esc_url( $classic_editor_link ); ?>" class="button">Install the Classic Editor</a>

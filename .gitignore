@@ -1,0 +1,7 @@
+.DS_Store
+report-critical-full.txt
+report-critical-source.txt
+report-errors-full.txt
+report-errors-source.txt
+report-warnings-full.txt
+report-warnings-source.txt
